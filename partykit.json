@@ -1,0 +1,5 @@
+{
+  "name": "thevoid",
+  "main": "party/server.js",
+  "serve": "./public"
+}

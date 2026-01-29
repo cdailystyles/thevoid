@@ -35,7 +35,9 @@
   // WebSocket connection
   function connect() {
     const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
-    ws = new WebSocket(`${protocol}//${window.location.host}/ws`);
+    const host = window.location.host;
+    // PartyKit WebSocket endpoint
+    ws = new WebSocket(`${protocol}//${host}/party/main`);
 
     ws.onopen = () => {
       console.log('Connected to The Void');

@@ -4,11 +4,10 @@
   "description": "The Void - an abstract, anonymous, endless shared interactive experience",
   "private": true,
   "scripts": {
-    "dev": "wrangler dev",
-    "deploy": "wrangler deploy",
-    "tail": "wrangler tail"
+    "dev": "partykit dev",
+    "deploy": "partykit deploy"
   },
   "devDependencies": {
-    "wrangler": "^3.0.0"
+    "partykit": "^0.0.111"
   }
 }

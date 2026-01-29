@@ -11,32 +11,15 @@ An abstract, anonymous, endless shared interactive experience. No game mechanics
 - **Whispered Words**: Occasional words fade in and out ("here", "now", "drift", "echo")
 - **Presence Counter**: See how many others are in The Void
 
-## Deploy to Cloudflare
-
-### One-time setup
-
-1. Install Wrangler CLI:
-   ```bash
-   npm install -g wrangler
-   ```
-
-2. Login to Cloudflare:
-   ```bash
-   wrangler login
-   ```
-
-### Deploy
+## Deploy (Free)
 
 ```bash
 npm install
+npx partykit login
 npm run deploy
 ```
 
-That's it! Your site will be live at `https://thevoid.<your-subdomain>.workers.dev`
-
-### Custom Domain
-
-To use a custom domain, add it in the Cloudflare dashboard under Workers & Pages > your worker > Settings > Domains & Routes.
+Your site will be live at `https://thevoid.<your-username>.partykit.dev`
 
 ## Local Development
 
@@ -45,11 +28,10 @@ npm install
 npm run dev
 ```
 
-Visit `http://localhost:8787`
+Visit `http://localhost:1999`
 
 ## Tech Stack
 
-- Cloudflare Workers (edge compute)
-- Durable Objects (WebSocket state management)
+- [PartyKit](https://partykit.io) - Real-time multiplayer infrastructure (free tier)
 - Vanilla JavaScript frontend
 - No build step required
