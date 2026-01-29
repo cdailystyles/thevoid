@@ -11,30 +11,45 @@ An abstract, anonymous, endless shared interactive experience. No game mechanics
 - **Whispered Words**: Occasional words fade in and out ("here", "now", "drift", "echo")
 - **Presence Counter**: See how many others are in The Void
 
-## Running Locally
+## Deploy to Cloudflare
+
+### One-time setup
+
+1. Install Wrangler CLI:
+   ```bash
+   npm install -g wrangler
+   ```
+
+2. Login to Cloudflare:
+   ```bash
+   wrangler login
+   ```
+
+### Deploy
 
 ```bash
 npm install
-npm start
+npm run deploy
 ```
 
-Visit `http://localhost:3000`
+That's it! Your site will be live at `https://thevoid.<your-subdomain>.workers.dev`
 
-## Deployment
+### Custom Domain
 
-### Railway / Render / Fly.io
+To use a custom domain, add it in the Cloudflare dashboard under Workers & Pages > your worker > Settings > Domains & Routes.
 
-1. Connect your GitHub repository
-2. Set the start command to `npm start`
-3. Deploy
+## Local Development
 
-### Environment Variables
+```bash
+npm install
+npm run dev
+```
 
-- `PORT` - Server port (default: 3000)
+Visit `http://localhost:8787`
 
 ## Tech Stack
 
-- Node.js + Express
-- WebSocket (ws library)
+- Cloudflare Workers (edge compute)
+- Durable Objects (WebSocket state management)
 - Vanilla JavaScript frontend
 - No build step required
