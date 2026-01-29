@@ -1,0 +1,17 @@
+{
+  "name": "thevoid",
+  "version": "1.0.0",
+  "description": "The Void - an abstract, anonymous, endless shared interactive experience",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": ["void", "interactive", "multiplayer", "websocket", "art"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "ws": "^8.16.0"
+  }
+}
